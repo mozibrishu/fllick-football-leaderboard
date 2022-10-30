@@ -34,6 +34,7 @@ document.querySelector('.pp_againBtn').addEventListener('click', function () {
 
 
 goal = 0;
+tournament = true;
 
 function playing() {
   shoot = false;
@@ -231,7 +232,7 @@ document.querySelector('.pp_submit_btn').addEventListener('click', function () {
   var age = getValue('age');
 
   if (checkMobileNumber()) {
-    if (checkAge()&& checkName()) {
+    if (checkAge() && checkName()) {
       gsap.to('.pp_slide_3', { display: 'none' });
       gsap.to('.pp_slide_2', { display: 'none' });
       gsap.to('.pp_slide_4', { display: 'block' });
@@ -243,7 +244,7 @@ document.querySelector('.pp_submit_btn').addEventListener('click', function () {
 
 function checkName() {
   var name = getValue('name');
-  if (name != ''){
+  if (name != '') {
     document.getElementById('name').classList.add('success');
     document.getElementById('name').classList.remove('error');
     return true;
@@ -255,7 +256,7 @@ function checkName() {
 
 function checkAge() {
   var age = getValue('age');
-  if (age > 2 && age <= 100){
+  if (age > 2 && age <= 100) {
     document.getElementById('age').classList.add('success');
     document.getElementById('age').classList.remove('error');
     return true;
@@ -283,6 +284,7 @@ function submitForm(name, mobileNum, age) {
       console.log(this.responseText);
       if ('success' == this.responseText) {
         console.log('successfully inserted');
+        showLeaderBoard();
       }
       // if ('success' == this.responseText) {
       //     setInnerHtml('banner', "<h3 id='submissionSuccess'>Successfully Inserted</h3>");
@@ -321,18 +323,40 @@ function checkMobileNumber() {
 
   }
 }
-tournament = true;
+
 
 // leaderboard operation
-function showLeaderBoard(){
-  if(tournament){
-    
+function showLeaderBoard() {
+  tbodyHtml = '';
+  rank = 1;
+  if (tournament){
+    fetchUrl = 'http://localhost/ad/goalFootball/v3_plus_DB/database/tournamentLeader.php';
+  } 
+  else{
+    fetchUrl = 'http://localhost/ad/goalFootball/v3_plus_DB/database/todayLeader.php';
   }
+  fetch(fetchUrl)
+      .then(res => res.json())
+      .then(data => dataToTable(data))
 }
 
 
 
+function dataToTable(data) {
 
+  data.forEach(element => {
+    // console.log(`name: ${element.NAME} Goal: ${element.GOAL}`);
+    // <td>${element.NAME}</td>
+    tbodyHtml += `<tr>
+  <td>${rank++}</td>
+  <td>${element.NAME}</td>
+  <td>${element.AGE}</td>
+  <td>*-${element.MOBILE.slice(-6)}</td>
+  <td>${element.GOAL}</td>
+</tr>`
+  });
+  document.querySelector('#tbodyAdd').innerHTML = tbodyHtml;
+}
 
 
 
