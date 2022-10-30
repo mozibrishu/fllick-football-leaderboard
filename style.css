@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.pp_container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.check {
+  top: 0px;
+  left: 0px;
+  opacity: .5;
+}
+
+
+/* slide_2 */
+.pp_bg {
+  top: 0px;
+  left: 0px;
+}
+
+.pp_submit_bg {
+  top: 0px;
+  left: 0px;
+}
+
+.pp_startBtn {
+  top: 164px;
+  left: 80px;
+  height: 55px;
+  width: 150px;
+  background-color: #3f51b5;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.pp_slide_2 .pp_keeper {
+  top: 78px;
+  left: 128px;
+}
+
+.pp_slide_2 .pp_hand {
+  top: 170px;
+  left: 158px;
+}
+
+.pp_slide_2 .pp_ball {
+  top: 199px;
+  left: 130px;
+}
+
+.pp_slide_2 .pp_ball_replica {
+  top: 203px;
+  left: 134px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff00;
+  opacity: .5;
+}
+
+.pp_slide_2 .pp_goal_state {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp_slide_2 .pp_goal_text {
+  color: #fff;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f51b566;
+  height: 100px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.pp_slide_2 .pp_finalScore {
+  color: #e7490a;
+  font-size: 30px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ccccccff;
+  height: 200px;
+  width: 250px;
+  border-radius: 20px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  flex-direction: column;
+}
+
+.material-icons {
+  padding: 1px;
+  font-weight: 700;
+}
+
+.pp_againBtn {
+  height: 40px;
+  width: 150px;
+  background-color: #3f51b5;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.pp_getOffer {
+  height: 40px;
+  width: 150px;
+  background-color: #3f51b5;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.pp_slide_2 .pp_chance {
+  top: 10px;
+  left: 5px;
+  height: 30px;
+  width: 90px;
+  background-color: #ffffff00;
+  display: flex;
+}
+
+.pp_slide_2 .pp_ball_ch {
+  height: 30px;
+  width: 30px;
+}
+
+.pp_slide_2 .pp_shadow {
+  top: 234px;
+  left: 126px;
+}
+
+.pp_slide_2 .pp_score_div {
+  top: 13px;
+  left: 240px;
+  height: 26px;
+  width: 50px;
+  background-color: #ffffff00;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+span#pp_score {
+  font-size: 25px;
+  font-weight: bolder;
+  color: yellowgreen;
+}
+
+
+.pp_submit_btn {
+  top: 196px;
+  left: 86px;
+}
+
+.pp_uporer_lekha {
+  top: 26px;
+  left: 33px;
+}
+
+.pp_finalPage {
+  top: 0px;
+  left: 0px;
+  height: 250px;
+  width: 300px;
+  background-color: #cccccc;
+  color: #3f51b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+form {
+  position: absolute;
+  top: 72px;
+  left: 45px;
+}
+
+form input {
+  height: 34px;
+  width: 212px;
+  /* border: 1px solid red; */
+  margin-bottom: 6px;
+  border: none;
+  padding-left: 15px;
+  background-color: #ffffff00;
+  border-radius: 10px;
+}
+
+
+
+/* leader board */
+.pp_leader_bg {
+  top: 26px;
+  left: 6px;
+}
+
+.pp_today1,
+.pp_today2 {
+  top: 210px;
+  left: 41px;
+}
+
+.pp_tournament1,
+.pp_tournament2 {
+  top: 210px;
+  left: 160px;
+}
+
+.dataTable {
+  top: 94px;
+  left: 24px;
+  border: 1px solid red;
+  width: 253px;
+  color: white;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+  /* max-height: 100px; */
+  /* overflow-y: scroll; */
+  /* display: block; */
+  /* height: 30px; */
+}
+
+td {
+  border: 1px solid #fff;
+  font-size: 10px;
+}
+
+.tableDiv {
+  width: 253px;
+  top: 94px;
+  left: 24px;
+  /* overflow: hidden; */
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+}
+
+/* Utility class */
+.pp_absolute {
+  position: absolute;
+}
+
+.pp_hidden {
+  display: none;
+}
+
+.pp_zeroOpacity {
+  opacity: 0;
+}
+
+.error {
+  outline: 2px solid red !important;
+}
+
+.success {
+  outline: 2px solid rgb(9, 148, 39) !important;
+}

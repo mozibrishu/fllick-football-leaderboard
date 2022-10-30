@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flick football</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="//purplepatch.online/assets/ico/favicon.ico"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="pp_container">
+    <img src="slide2/bg.jpg" alt="" class="pp_bg pp_absolute" draggable="false">
+    <div class="pp_startBtn pp_absolute">
+      PLAY</div>
+    <div class="pp_slide_2">
+      <img src="slide2/keeper.png" alt="" class="pp_keeper pp_absolute" draggable="false">
+      <img src="slide2/hand.png" alt="" class="pp_hand pp_absolute pp_hidden pp_zeroOpacity" draggable="false">
+      <img src="slide2/shadow.png" alt="" class="pp_shadow pp_absolute pp_hidden" draggable="false">
+      <img src="slide2/ball.png" alt="" class="pp_ball pp_absolute pp_hidden" draggable="false">
+      <div class="pp_ball_replica pp_absolute"></div>
+      <div class="pp_goal_state pp_absolute pp_hidden">
+        <div class="pp_goal_text  pp_hidden pp_zeroOpacity">
+          GOAL
+        </div>
+      </div>
+      <div class="pp_chance pp_absolute">
+        <img src="slide2/ball.png" alt="" class="pp_ball_ch" id="ball_1" draggable="false">
+        <img src="slide2/ball.png" alt="" class="pp_ball_ch" id="ball_2" draggable="false">
+        <img src="slide2/ball.png" alt="" class="pp_ball_ch" id="ball_3" draggable="false">
+      </div>
+      <div class="pp_score_div pp_absolute" draggable="false">
+        <span id="pp_score">0</span>
+      </div>
+      <div class="pp_finalScore pp_hidden pp_zeroOpacity">
+        <span>Your Score</span>
+        <span id="finalScore">26</span>
+        <div class="pp_againBtn">Again <i class="material-icons">refresh</i></div>
+        <div class="pp_getOffer">Get Offer</i></div>
+
+      </div>
+    </div>
+    <div class="pp_slide_3 pp_hidden pp_zeroOpacity">
+      <img src="3Goabg2l.jpg" alt="" class="pp_submit_bg pp_absolute" draggable="false">
+      <img src="btn.png" alt="" class="pp_submit_btn pp_absolute" draggable="false">
+      <img src="uporerlekha.png" alt="" class="pp_uporer_lekha pp_absolute" draggable="false">
+
+
+      <form action="#">
+        <input type="text" id="name" name="name" placeholder="Name" onkeyup="checkName()"><br>
+        <input type="number" id="mobile_no" name="mobile_no" placeholder="Mobile number"
+          onkeyup="checkMobileNumber()"><br>
+        <input type="number" id="age" name="age" placeholder="Age" min="2" max="100" onkeyup="checkAge()"><br>
+      </form>
+    </div>
+
+    <div class="pp_slide_4 pp_hidden">
+      <img src="./slide3/leaderboardbg.png" alt="" srcset="" class="pp_leader_bg pp_absolute">
+      <img src="./slide3/today1.png" alt="" srcset="" class="pp_today1 pp_absolute">
+      <img src="./slide3/today2.png" alt="" srcset="" class="pp_today1 pp_absolute">
+      <img src="./slide3/tournament1.png" alt="" srcset="" class="pp_tournament1 pp_absolute">
+      <img src="./slide3/tournament2.png" alt="" srcset="" class="pp_tournament2 pp_absolute">
+      
+      
+      
+      <div style="height: 110px;" class="pp_absolute tableDiv">
+
+        <table class="dataTable">
+          <colgroup>
+            <col span="1" style="width: 12px;">
+            <col span="1" style="width: 35px;">
+            <col span="1" style="width: 10px;">
+            <col span="1" style="width: 24px;">
+            <col span="1" style="width: 18px;">
+          </colgroup>
+          <tbody id="tbodyAdd">
+            <tr>
+              <td>12</td>
+              <td>Name:mozibur rahmandkjfsdl</td>
+              <td>age</td>
+              <td>mobile</td>
+              <td>goal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- <div class="pp_finalPage pp_absolute  pp_hidden pp_zeroOpacity ">Thanks for <br> Playing</div> -->
+    <!-- <img src="./slide3/Preview.jpg" alt="" class="check pp_absolute"> -->
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/Draggable.min.js"></script>
+  <script src="script.js?v=1.1"></script>
+  <script src="./database/db.js"></script>
+</body>
+
+</html>
