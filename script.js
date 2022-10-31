@@ -343,7 +343,7 @@ function showLeaderBoard() {
 
 
 function dataToTable(data) {
-
+  tbodyHtml = '';
   data.forEach(element => {
     // console.log(`name: ${element.NAME} Goal: ${element.GOAL}`);
     // <td>${element.NAME}</td>
@@ -358,8 +358,24 @@ function dataToTable(data) {
   document.querySelector('#tbodyAdd').innerHTML = tbodyHtml;
 }
 
+function showTodayLeader() {
+  gsap.set(['.pp_today2','.pp_tournament2'],{display:'none'});
+  gsap.set(['.pp_today1','.pp_tournament1'],{display:'block'});
+
+  tournament = false;
+  showLeaderBoard();
+}
+function showTournamentLeader() {
+  gsap.set(['.pp_today1','.pp_tournament1'],{display:'none'});
+  gsap.set(['.pp_today2','.pp_tournament2'],{display:'block'});
+
+  tournament = true;
+  showLeaderBoard();
+}
 
 
+document.querySelector('.pp_today2').addEventListener('click',showTodayLeader);
+document.querySelector('.pp_tournament1').addEventListener('click',showTournamentLeader);
 
 
 // Add remove Get set

@@ -6,7 +6,8 @@ $TODAY = date('Y-m-d');
 if (!$db) {
   echo $db->lastErrorMsg();
 }
-$execQ = 'SELECT * FROM gamersInfo WHERE PLAY_DATE = "' . $TODAY . '" ORDER BY GOAL DESC, ID ASC LIMIT 10';
+$execQ = 'SELECT * FROM gamersInfo WHERE PLAY_DATE = "' . $TODAY . '" GROUP BY MOBILE ORDER BY max(GOAL) DESC, ID ASC LIMIT 10';
+// $execQ = 'SELECT * FROM gamersInfo WHERE PLAY_DATE = "' . $TODAY . '" ORDER BY GOAL DESC, ID ASC LIMIT 10';
 $ret = $db->query($execQ);
 $jsonArr = [];
 

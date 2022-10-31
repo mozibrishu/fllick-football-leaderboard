@@ -7,7 +7,7 @@ $TODAY = date('Y-m-d');
 if (!$db) {
   echo $db->lastErrorMsg();
 }
-$execQ = 'SELECT * FROM gamersInfo ORDER BY GOAL DESC, ID ASC LIMIT 10';
+$execQ = 'SELECT * FROM gamersInfo GROUP BY MOBILE ORDER BY max(GOAL) DESC, ID ASC LIMIT 10';
 $ret = $db->query($execQ);
 $jsonArr = [];
 

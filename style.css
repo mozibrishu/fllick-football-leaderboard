@@ -38,10 +38,10 @@ body {
 }
 
 .pp_startBtn {
-  top: 164px;
+  top: 198px;
   left: 80px;
-  height: 55px;
-  width: 150px;
+  height: 30px;
+  width: 140px;
   background-color: #3f51b5;
   border-radius: 20px;
   color: #fff;
@@ -50,7 +50,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 800;
   cursor: pointer;
   z-index: 99;
@@ -248,12 +248,14 @@ form input {
 .pp_today2 {
   top: 210px;
   left: 41px;
+  cursor: pointer;
 }
 
 .pp_tournament1,
 .pp_tournament2 {
   top: 210px;
   left: 160px;
+  cursor: pointer;
 }
 
 .dataTable {
